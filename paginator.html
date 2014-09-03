@@ -1,0 +1,3 @@
+<button ng-disabled="curPage == 1" ng-click="prev()">Prev</button>
+<button ng-repeat="p in pagers()" ng-disabled="this.p == curPage" ng-click="goPage(this.p)">{{p}}</button>
+<button ng-disabled="curPage >= maxPage()" ng-click="next()">Next</button>
