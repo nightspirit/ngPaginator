@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <script type="text/javascript" src="http://code.angularjs.org/1.3.0-beta.17/angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+  </head>
+  <body ng-controller="MainCtrl as main">
+    <paginator data="main.data" cur-page="main.curPage" page-size="main.pageSize" pager-size="main.pagerSize"></paginator>
+    <ul>
+      <li ng-repeat="p in main.data | startFrom:(main.curPage-1)*main.pageSize | limitTo:main.pageSize">{{p.name}} - {{p.email}}</li>
+    </ul>
+    <div paginator data="main.data" cur-page="main.curPage" page-size="main.pageSize" pager-size="main.pagerSize"></div>
+  </body>
+</html>
