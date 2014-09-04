@@ -3,6 +3,9 @@
 *Angular Directive for Data Pagination.*
 by Po Chen Lin
 
+##Demo
+http://nightspirit.github.io/ngPaginator/
+
 ##How to Use
 
 1. Declare **paginator** directive in your module.
