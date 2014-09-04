@@ -10,5 +10,10 @@
       <li ng-repeat="p in main.data | startFrom:(main.curPage-1)*main.pageSize | limitTo:main.pageSize">{{p.name}} - {{p.email}}</li>
     </ul>
     <div paginator data="main.data" cur-page="main.curPage" page-size="main.pageSize" pager-size="main.pagerSize"></div>
+    <button ng-disabled="curPage == 1" ng-click="prev()">Prev</button>
+    <script type="text/ng-template" id="paginator.html">
+      <button ng-repeat="p in pagers()" ng-disabled="this.p == curPage" ng-click="goPage(this.p)">{{p}}</button>
+      <button ng-disabled="curPage >= maxPage()" ng-click="next()">Next</button>
+    </script>
   </body>
 </html>
