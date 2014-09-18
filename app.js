@@ -11,7 +11,7 @@
   function MainCtrl(data){
     var self = this;
     self.data = data;
-    self.curPage = 0;
+    self.curPage = 1;
     self.pageSize = 10;
     self.pagerSize = 5;
   }
