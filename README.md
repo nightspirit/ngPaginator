@@ -25,7 +25,7 @@ by Po Chen Lin
 	``` javascript
 	// use controller as viewmodel or old fashion $scope for view
 	this.data = data; // array of data
-	this.curPage = 0; // current page. External function can change page with this
+	this.curPage = 1; // current page. External function can change page with this
 	this.pageSize = 10; // how many items per page
 	this.pagerSize = 5; // how many pagers in paginator (odd number recommended)
 	```
